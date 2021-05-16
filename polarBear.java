@@ -12,10 +12,14 @@ public class polarBear extends Actor
      * Act - do whatever the polarBear wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public int speed;
+    private int speed;
+    public polarBear (int setSpeed)
+    {
+        speed = setSpeed;
+    }
     public void act() 
     {
-      move(5); 
+      move(speed); 
       restart();
         if (isAtEdge())
         {
@@ -28,7 +32,7 @@ public class polarBear extends Actor
     {
         if (isTouching( seals.class))
         {
-            Greenfoot.stop();
+           Greenfoot.stop(); 
         }
     }
 }

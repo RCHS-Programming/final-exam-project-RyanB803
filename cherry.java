@@ -14,10 +14,6 @@ public class cherry extends Actor
      */
     public void act() 
     {
-        if(isTouching(seals.class))
-        {
-            getWorld().removeObject (this);
-
-        }
+        
     }    
 }
